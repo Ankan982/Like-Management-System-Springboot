@@ -17,7 +17,7 @@ public class PostLikeProcess {
 	{
 		Boolean isCreateOrUpdate = Boolean.FALSE;
 
-		//System.out.println("Inside the method of createOrUpdatePostLike of PostLikeProcess with input: "+createOrUpdateLikeRequest);
+		System.out.println("Inside the method of createOrUpdatePostLike of PostLikeProcess with input: "+createOrUpdateLikeRequest);
 		
 		if(null!=createOrUpdateLikeRequest.getCreateOrUpdateFlag() && 
 				createOrUpdateLikeRequest.getCreateOrUpdateFlag().equalsIgnoreCase("C"))
@@ -51,6 +51,7 @@ public class PostLikeProcess {
 	
 	public LikeEntity getPostDetails(String postId)
 	{
+		System.out.println("Inside the method of getPostDetails of PostLikeProcess with input: "+postId);
 		LikeEntity getLikeEntity = new LikeEntity();
 		getLikeEntity =  tLikeRepository.findByPostId(Long.valueOf(postId));
 		
